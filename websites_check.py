@@ -17,8 +17,8 @@ def write_metric(value, metric):
                       ]
                       )
 
-    def check_site(url, metric):
-        STAT = 1
+def check_site(url, metric):
+    STAT = 1
 
     print("Checking %s " % url)
     request = urllib2.Request("http://" + url)
@@ -48,7 +48,7 @@ def write_metric(value, metric):
                 STAT = response.getcode()
         return STAT
 
-    def lambda_handler(event, context):
+def lambda_handler(event, context):
 
     # Change these to your actual websites. Remember, the more web
     # the longer the lambda function will run
